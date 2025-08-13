@@ -1,0 +1,576 @@
+:root {
+    --primary-color: #5D4037;
+    --secondary-color: #A1887F;
+    --text-color: #3E2723;
+    --bg-color: #F5F5F5;
+    --paper-color: #FFFAF5;
+    --border-color: #D7CCC8;
+    --font-serif: 'Noto Serif KR', serif;
+    --font-sans: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--paper-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAACQAAAAAQAAAJAAAAABAAOShgAHAAAAEgAAAHigAgAEAAAAAQAAMgCgAwAEAAAAAQAAMgAAAAAAAAYBAwADAAAAAQAGAAABGgAFAAAAAQAAALQBGwAFAAAAAQAAALgBKAADAAAAAQACAAACAQAEAAAAAQAAAMgCAwAEAAAAAQAAAMoAAAAAY3VybAAA/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAMgAyAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A9UooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z');
+}
+
+section {
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 0;
+    line-height: 0;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero .hero-text {
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+}
+
+.hero .hero-text h2 {
+    font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+    font-size: 5rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+
+/* Intro & Greeting */
+.intro .names {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.intro .date-location {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.divider {
+    width: 20px;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 30px auto;
+}
+
+.greeting p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.parents {
+    margin-top: 30px;
+    font-size: 1rem;
+}
+.parents span {
+    font-weight: 500;
+}
+.parents strong {
+    font-weight: 600;
+    font-family: var(--font-serif);
+}
+
+/* Couple Section */
+.couple {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.person h3 strong {
+    font-family: var(--font-serif);
+}
+.person-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background-color: #f0ebe5;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+.contact-link:hover {
+    background-color: #e9e2dc;
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+.gallery-grid a {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+}
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery-grid a:hover {
+    transform: scale(1.05);
+    filter: brightness(0.9);
+}
+
+/* Calendar Section */
+.calendar-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.calendar-header h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+.day-name, .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    font-size: 0.9rem;
+}
+.day-name {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+.day.wedding-day {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    position: relative;
+}
+.wedding-day::after {
+    content: '오후 12:30';
+    position: absolute;
+    bottom: -18px;
+    font-size: 0.6rem;
+    color: var(--primary-color);
+    width: 100%;
+    left: 0;
+}
+.wedding-day-info {
+    margin-top: 25px;
+    font-size: 1rem;
+}
+
+/* Location Section */
+.map-image {
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+    border: 1px solid var(--border-color);
+}
+.map-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.map-btn {
+    flex-grow: 1;
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+    width: 100%;
+}
+.map-btn:hover {
+    opacity: 0.9;
+}
+.map-btn.tmap { background-color: #FF9E8F; color: #333333; }
+.map-btn.kakao { background-color: #FFEC8A; color: #333333; }
+.map-btn.naver { background-color: #6DD495; color: #333333; }
+.transport-info {
+    text-align: left;
+    margin-top: 20px;
+    background-color: #fdfaf7;
+    padding: 15px;
+    border-radius: 8px;
+}
+.transport-info p {
+    margin-bottom: 8px;
+}
+.transport-info i {
+    margin-right: 8px;
+    color: var(--secondary-color);
+}
+
+
+/* Account Info Section */
+.accordion {
+    margin-bottom: 10px;
+}
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    background-color: #fdfaf7;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s;
+    position: relative;
+    padding-right: 40px;
+}
+.accordion-header::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    transition: transform 0.3s ease;
+}
+.accordion-header.active::after {
+    transform: rotate(45deg);
+}
+
+.accordion-header:hover {
+    background-color: #f8f2ec;
+}
+.accordion-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.account-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.account-entry p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+.account-entry strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+.account-entry .copy-btn {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+}
+.copy-btn {
+    padding: 8px 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+.copy-btn:active {
+    background-color: #4a322a;
+}
+
+/* Guestbook Section */
+#guestbook-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+#guestbook-form .form-group {
+    display: flex;
+    gap: 10px;
+}
+#guestbook-form input, #guestbook-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+}
+#guestbook-form input {
+    flex: 1;
+}
+#guestbook-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+#guestbook-form button {
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#guestbook-entries {
+    text-align: left;
+}
+.guestbook-entry {
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.guestbook-entry .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+.guestbook-entry .meta .date {
+    color: var(--secondary-color);
+    font-size: 0.8rem;
+}
+.guestbook-entry .message {
+    color: #444;
+}
+
+/* RSVP & Footer */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1001; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#rsvp-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#rsvp-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#rsvp-form input[type="text"],
+#rsvp-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+#rsvp-form .radio-group label {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#rsvp-form button {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+#rsvp-btn {
+    padding: 15px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+#rsvp-btn:hover {
+    background-color: #4a322a;
+}
+footer {
+    padding: 30px 20px;
+    background-color: #f0ebe5;
+    text-align: center;
+}
+footer p {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+/* Floating Action Buttons */
+.action-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+#share-btn, #scroll-top-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, opacity 0.3s;
+}
+#scroll-top-btn {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+#scroll-top-btn.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    section {
+        padding: 30px 15px;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .hero .hero-text h2 {
+        font-size: 2.5rem;
+    }
+    .intro .names {
+        font-size: 1.3rem;
+    }
+    .intro .date-location, .greeting p {
+        font-size: 1rem;
+    }
+    .map-buttons {
+        flex-direction: column;
+    }
+    .couple {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

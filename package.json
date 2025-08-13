@@ -1,0 +1,26 @@
+{
+  "name": "wedding-invitation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:client\" \"npm:dev:server\"",
+    "dev:client": "vite",
+    "dev:server": "node server.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.mjs",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.0",
+    "express": "^5.1.0",
+    "photoswipe": "^5.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "gh-pages": "^6.3.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
