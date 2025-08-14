@@ -5,3 +5,21 @@
 
 [functions]
   directory = "netlify/functions"
+
+[[redirects]]
+  from = "/api/guestbook"
+  to = "/.netlify/functions/get-guestbook"
+  status = 200
+  method = "GET"
+
+[[redirects]]
+  from = "/api/guestbook"
+  to = "/.netlify/functions/post-guestbook"
+  status = 200
+  method = "POST"
+
+[[redirects]]
+  from = "/api/rsvp"
+  to = "/.netlify/functions/post-rsvp"
+  status = 200
+  method = "POST"
