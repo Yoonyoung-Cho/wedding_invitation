@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 };
 
                 try {
-                    const response = await fetch('/api/guestbook', {
+                    const response = await fetch('/.netlify/functions/post-guestbook', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
