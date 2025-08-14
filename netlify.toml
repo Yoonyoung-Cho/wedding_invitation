@@ -17,6 +17,7 @@
   to = "/.netlify/functions/post-guestbook"
   status = 200
   method = "POST"
+  force = true
 
 [[redirects]]
   from = "/api/rsvp"
