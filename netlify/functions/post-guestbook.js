@@ -4,7 +4,7 @@ const sql = neon();
 
 exports.handler = async (event, context) => {
   console.log('post-guestbook function invoked.');
-  console.log('Event body:', event.body);
+  console.log('Raw event body:', event.body); // Log raw body
 
   if (event.httpMethod !== 'POST') {
     console.log('Method not allowed:', event.httpMethod);
@@ -12,7 +12,8 @@ exports.handler = async (event, context) => {
   }
 
   try {
-    const { name, message } = JSON.parse(event.body);
+    const parsedBody = JSON.parse(event.body);
+    const { name, message } = parsedBody;
     console.log('Parsed data:', { name, message });
 
     if (!name || !message) {
@@ -27,14 +28,16 @@ exports.handler = async (event, context) => {
       RETURNING id, name, message, date;
     `;
     console.log('Successfully inserted new entry:', newEntry);
+    console.log('New entry object:', newEntry); // Log the actual object
 
     return {
-      statusCode: 201,
+      statusCode: 200, // Changed to 200 to match network tab observation
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newEntry),
     };
   } catch (error) {
     console.error('Error posting guestbook entry:', error);
+    console.error('Full error object:', error); // Log full error object
     return {
       statusCode: 500,
       body: JSON.stringify({ message: 'Error writing guestbook data' }),
