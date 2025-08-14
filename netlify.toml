@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+  environment = { SECRETS_SCAN_OMIT_KEYS = "VITE_KAKAO_MAP_API_KEY" }
+
+[functions]
+  directory = "netlify/functions"
